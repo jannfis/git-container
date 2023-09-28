@@ -1,0 +1,6 @@
+#!/bin/sh
+
+fcgiwrap -s unix:/var/run/fcgiwrap.socket & 
+sleep 1 
+chgrp nginx /var/run/fcgiwrap.socket
+chmod g+rw /var/run/fcgiwrap.socket
